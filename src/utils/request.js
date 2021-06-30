@@ -1,7 +1,7 @@
 /* eslint-disable no-restricted-globals */
 import axios from 'axios';
 
-axios.defaults.baseURL = 'https://api.hoolicash.cf';
+axios.defaults.baseURL = 'http://localhost:5000/api';
 axios.defaults.headers.common.Accept = 'application/json';
 
 axios.interceptors.response.use(

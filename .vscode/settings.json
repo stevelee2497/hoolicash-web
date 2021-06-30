@@ -1,3 +1,5 @@
 {
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "thunder-client.loadFromProject": true,
+  "thunder-client.workspaceRelativePath": "api-templates"
 }
