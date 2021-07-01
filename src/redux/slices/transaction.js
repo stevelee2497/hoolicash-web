@@ -19,7 +19,6 @@ export const getTransactionsAsync = createAsyncThunk(
       const response = await callAuthorizationApi(`/transaction?${queryString}`, 'GET');
       return response.data;
     } catch (err) {
-      console.log(err);
       return rejectWithValue(err.response.data);
     }
   }
@@ -38,8 +37,9 @@ export const transactionSlice = createSlice({
         state.loading = false;
         state.transactions = payload;
       })
-      .addCase(getTransactionsAsync.rejected, (state, action) => {
+      .addCase(getTransactionsAsync.rejected, (state, { payload }) => {
         state.loading = false;
+        state.error = payload;
       });
   },
 });

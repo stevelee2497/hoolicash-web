@@ -1,5 +1,6 @@
 {
   "editor.formatOnSave": true,
   "thunder-client.loadFromProject": true,
-  "thunder-client.workspaceRelativePath": "api-templates"
+  "thunder-client.workspaceRelativePath": "api-templates",
+  "editor.defaultFormatter": "dbaeumer.vscode-eslint"
 }

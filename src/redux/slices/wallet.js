@@ -19,7 +19,6 @@ export const getWalletsAsync = createAsyncThunk(
       const response = await callAuthorizationApi(`/wallet?${queryString}`, 'GET');
       return response.data;
     } catch (err) {
-      console.log(err);
       return rejectWithValue(err.response.data);
     }
   }

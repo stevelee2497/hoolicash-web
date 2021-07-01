@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
-import { getTransactionsAsync } from '../../redux/slices/transaction';
 import { useDispatch, useSelector } from 'react-redux';
 import _ from 'lodash';
 import moment from 'moment';
+import { getTransactionsAsync } from '../../redux/slices/transaction';
 import { formatter, random } from '../../utils/numberHelper';
 
 const TransactionList = () => {

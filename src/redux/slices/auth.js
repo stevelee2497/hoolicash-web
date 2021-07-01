@@ -14,7 +14,6 @@ export const loginAsync = createAsyncThunk('auth/login', async (data, { rejectWi
     const response = await callApi('/account/login', 'POST', data);
     return response.data;
   } catch (err) {
-    console.log(err);
     return rejectWithValue(err.response.data);
   }
 });
@@ -38,8 +37,9 @@ export const authSlice = createSlice({
         state.loading = false;
         state.token = payload.accessToken;
       })
-      .addCase(loginAsync.rejected, (state, action) => {
+      .addCase(loginAsync.rejected, (state, { payload }) => {
         state.loading = false;
+        state.error = payload;
       });
   },
 });

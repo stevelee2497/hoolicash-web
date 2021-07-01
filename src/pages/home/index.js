@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import TransactionList from '../../components/transaction-list';
 import Reports from '../../components/reports';
-import WalletList from '../../components/wallet-list';
+import TransactionList from '../../components/transaction-list';
 import LoginModal from '../../components/login-modal';
+import WalletList from '../../components/wallet-list';
 
 const Home = () => {
   const [open, setOpen] = useState(true);

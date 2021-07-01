@@ -3,10 +3,12 @@ import authReducer from './slices/auth';
 import transactionReducer from './slices/transaction';
 import walletReducer from './slices/wallet';
 
-export const store = configureStore({
+const store = configureStore({
   reducer: {
     auth: authReducer,
     transaction: transactionReducer,
     wallet: walletReducer,
   },
 });
+
+export default store;
