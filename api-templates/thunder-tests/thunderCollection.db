@@ -1,5 +1,5 @@
+{"folders":[],"sortNum":30000,"colName":"category","_id":"2938ff1d-f8eb-4f92-9b5b-9701cfae9f78","created":"2021-06-30T07:56:46.248Z","createdAt":{"$$date":1625039806248},"updatedAt":{"$$date":1625039806248}}
 {"folders":[],"sortNum":10000,"colName":"auth","_id":"8806bce0-bc6f-46b0-b265-e3d7ed0c7517","created":"2021-06-30T06:40:01.344Z","createdAt":{"$$date":1625035201345},"updatedAt":{"$$date":1625035201345}}
 {"folders":[],"sortNum":20000,"colName":"transaction","_id":"9e16036a-7423-43d4-85b6-9e13ef221c2f","created":"2021-06-30T06:41:26.271Z","createdAt":{"$$date":1625035286272},"updatedAt":{"$$date":1625035292927}}
-{"folders":[],"sortNum":0,"colName":"history","_id":"history","created":"2021-06-30T06:39:59.779Z","createdAt":{"$$date":1625035199779},"updatedAt":{"$$date":1625035199779}}
-{"folders":[],"sortNum":30000,"colName":"category","_id":"2938ff1d-f8eb-4f92-9b5b-9701cfae9f78","created":"2021-06-30T07:56:46.248Z","createdAt":{"$$date":1625039806248},"updatedAt":{"$$date":1625039806248}}
 {"folders":[],"sortNum":40000,"colName":"wallet","_id":"fa6e6308-ee27-4d09-bca6-2c3deddbbabd","created":"2021-06-30T07:58:19.558Z","createdAt":{"$$date":1625039899558},"updatedAt":{"$$date":1625039899558}}
+{"folders":[],"sortNum":0,"colName":"history","_id":"history","created":"2021-06-30T06:39:59.779Z","createdAt":{"$$date":1625035199779},"updatedAt":{"$$date":1625035199779}}
