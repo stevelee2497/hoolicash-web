@@ -1,9 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import TransactionList from '../../components/transaction-list';
 import Reports from '../../components/reports';
 import WalletList from '../../components/wallet-list';
+import LoginModal from '../../components/login-modal';
 
 const Home = () => {
+  const [open, setOpen] = useState(true);
+
+  if (!localStorage.getItem('token')) {
+    return <LoginModal open={open} setOpen={setOpen} />;
+  }
+
   return (
     <div className="flex h-screen bg-gray-200">
       <div className="w-1/2">
