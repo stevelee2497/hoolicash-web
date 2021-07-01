@@ -6,7 +6,9 @@
     "react/prop-types": "off",
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "react/jsx-props-no-spreading": "off",
-    "no-param-reassign": "off"
+    "global-require": "off",
+    "no-param-reassign": "off",
+    "import/no-extraneous-dependencies": "off"
   },
   "env": {
     "browser": true
