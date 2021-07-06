@@ -12,16 +12,14 @@ const Home = () => {
   }
 
   return (
-    <div className="flex h-screen bg-gray-200">
+    <div className="flex min-h-screen bg-gray-200">
       <div className="w-1/2">
         <TransactionList />
       </div>
       <div className="flex flex-col w-1/2 h-full">
-        <div className="h-1/2">
-          <Reports />
-        </div>
-        <div className="h-1/2">
+        <div className="fixed">
           <WalletList />
+          <Reports />
         </div>
       </div>
     </div>

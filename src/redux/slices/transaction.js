@@ -7,8 +7,9 @@ const initialState = {
   loading: false,
   error: null,
   transactions: [],
-  from: moment().startOf('month').format('YYYY-MM-DD'),
-  to: moment().endOf('month').format('YYYY-MM-DD'),
+  from: moment('2021-06-01').format('YYYY-MM-DD'),
+  to: moment('2021-06-30').endOf('month').format('YYYY-MM-DD'),
+  walletId: null,
 };
 
 export const getTransactionsAsync = createAsyncThunk(
@@ -27,7 +28,11 @@ export const getTransactionsAsync = createAsyncThunk(
 export const transactionSlice = createSlice({
   name: 'transaction',
   initialState,
-  reducers: {},
+  reducers: {
+    selectWallet: (state, action) => {
+      state.walletId = state.walletId ? null : action.payload;
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(getTransactionsAsync.pending, (state) => {
@@ -43,6 +48,8 @@ export const transactionSlice = createSlice({
       });
   },
 });
+
+export const { selectWallet } = transactionSlice.actions;
 
 const transactionReducer = transactionSlice.reducer;
 

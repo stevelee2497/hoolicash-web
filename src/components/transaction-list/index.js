@@ -7,12 +7,13 @@ import { formatter, random } from '../../utils/numberHelper';
 
 const TransactionList = () => {
   const dispatch = useDispatch();
-  const transactions = useSelector((state) => state.transaction.transactions);
+  const { from, to, walletId, transactions } = useSelector((state) => state.transaction);
   const groupByDate = _.groupBy(transactions, 'transactionDate');
 
   useEffect(() => {
-    dispatch(getTransactionsAsync({}));
-  }, [dispatch]);
+    const queryParams = { from, to, walletId };
+    dispatch(getTransactionsAsync(queryParams));
+  }, [dispatch, from, to, walletId]);
 
   return _.map(groupByDate, (group, key) => {
     const date = moment(key);
@@ -29,12 +30,12 @@ const TransactionList = () => {
         </div>
         <div className="border-t" />
         {group.map((transaction) => (
-          <div key={transaction.id} className="flex justify-between items-center my-1">
+          <div key={transaction.id} className="flex justify-between items-center my-1 pr-4">
             <div className="flex items-center">
               <div className="w-16 h-16 flex items-center justify-center p-2">
                 <img
                   alt=""
-                  src={`https://picsum.photos/id/${random(500)}/500/500`}
+                  src={`https://picsum.photos/id/${random(50)}/500/500`}
                   className="rounded-full"
                 />
               </div>
@@ -43,7 +44,15 @@ const TransactionList = () => {
                 <div className="text-sm">{transaction.detail}</div>
               </div>
             </div>
-            <div className="m-3">{formatter.format(transaction.amount)}</div>
+            <div
+              className={
+                transaction.amount > 0
+                  ? `text-green-600 font-semibold`
+                  : `text-red-600 font-semibold`
+              }
+            >
+              {formatter.format(transaction.amount)}
+            </div>
           </div>
         ))}
       </div>
